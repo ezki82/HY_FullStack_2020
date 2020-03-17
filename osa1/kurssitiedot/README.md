@@ -1,3 +1,6 @@
+Ajankäyttö:
+17.3.2020 1h tehtäviin
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
