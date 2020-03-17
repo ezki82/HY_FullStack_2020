@@ -51,9 +51,11 @@ const App = (props) => {
   const [voteArray, setVoteArray] = useState([0, 0, 0, 0, 0, 0])
 
   const anecdoteClickHandler = () => {
-    const anecdoteIndex = Math.floor(Math.random() * 6)
+    const anecdoteIndex = Math.floor(Math.random() * props.anecdotes.length)
     setSelected(anecdoteIndex)
     console.log(voteArray);
+    console.log(anecdoteIndex);
+    
     
   }
 
