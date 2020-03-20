@@ -7,7 +7,7 @@ const Persons = ({ persons, filter }) => {
   
     return (
       <div>
-        {showPersonsList.map((person,i) => <Person key={i} person={person}/>)}
+        {showPersonsList.map((person,i) => <Person key={i} person={person} deleteClickHandler={() => }/>)}
       </div>
     )
   }
