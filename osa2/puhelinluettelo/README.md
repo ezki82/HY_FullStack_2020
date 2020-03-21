@@ -1,6 +1,7 @@
-Ajankäyttö tehtäviin: 
-19.3.2020 3h
-20.3.2020 2h
+Ajankäyttö tehtäviin: <br />
+19.3.2020 3h<br />
+20.3.2020 2h<br />
+21.3.2020 1h
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
