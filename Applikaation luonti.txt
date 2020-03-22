@@ -1,0 +1,63 @@
+﻿HUOM! npm komennot aina projektin juuresta!
+
+Chrome selaimeen asennettavat lisärit:
+-JSONView, helpottaa JSON datan katselua
+
+Luo react sovellus käskyllä:
+
+npx create-react-app hakemisto		 				Luo hakemisto nimiseen hakemistoon applikaation.
+rm -r -force .git	 						Irroittaa projektin git-versionhallinnasta.
+npm start	 							Käynnistää devaus serverin ja avaa aloitussivun selaimeen.
+
+Jos kopioita sovelluksen paikasta toiseen, voi olla tarpeen poistaa node_modules hakemisto ja ajaa seuraava käsky, jotta riippuvuudet asennetaan uudestaan:
+npm install
+
+JSON-serverin luonti ja axios asennus:
+npm install axios --save							Asentaa axiosin. Tarkista package.json dependencies että axios on siellä
+npm install json-server --save -dev					Asentaa json-serverin sovelluskehityksen aikaiseksi riippuvuudeksi (-dev)
+
+"server": "json-server -p3001 db.json" rimpsu lisätään package.json scripts alle. Muista erottaa pilkulla edellisestä eject-määritteestä.
+
+npm run server, käynnistää json-serverin portissa 3001, joka määriteltiin package.json lisäyksessä.
+
+Backend sovellus käskyjä:
+luo haluamasi hakemisto, mene sinne ja kirjoita:
+
+npm init											Luo package.json filen kysymyksiin vastailun jälkeen
+
+scripts kenttään kannattaa lisätä "start": "node index.js", jolloin käynnistäminen sujuu helpommin komennolla npm start.
+Luo index.js tiedosto, joka ajetaan startin yhteydessä.
+Käynnistä käskyllä npm start.
+
+npm install express --save							Asentaa express kirjaston
+npm update											Päivittää projektin riippuvuudet
+npm install											Asentaa riippuvuudet package.json tiedoston mukaiseksi
+
+nodemon asennus kannattaa asentaa kehitysaikaiseksi riippuvuudeksi, jotta serverin koodin muuttuessa se päivitettäisiin automaattisesti käynnissä olevaan serveriin.
+
+npm install --save-dev nodemon						Asentaa nodemonin kehitysaikaiseksi riippuvuudeksi
+
+lisää package.json tiedoston scripts kohtaan seuraava teksti: "dev": "nodemon index.js"
+palvelimen voi nyt käynnistää sovelluskehitysmoodissa komennolla
+
+npm run dev											Käynnistää palvelimen sovelluskehitysmoodissa
+
+GIT repon luonti:
+luo projektiin git-repo komennolla git init
+lisää tiedostot komennolla git add . (lisää siis edellinen piste välilyönnin jälkeen komentoon)
+commit message annetaan komennolla git commit -m "viesti"
+luodaan yhteys remote repoon komennolla git remote add origin https://github.com/ezki82/puhelinluettelo_back.git
+voidaan tarkistaa yhteys remote repoon git remote -v
+pushataan projektin gittiin git push origin master
+
+Heroku app luonti
+komento heroku create luo projekti repon, kopioi git päätteinen osa ja tee siitä remote repo käskyllä git remote add heroku https://git.heroku.com/nameless-lake-27105.git
+voidaan tarkistaa yhteys remote repoon git remote -v
+pushataan herokuun: git push heroku master
+
+
+salmiesa
+HelsEzKi1982
+
+KÄTEVIÄ OHJELMIA:
+https://www.websequencediagrams.com/ 				WEB SIVU SEKVENSSIKAAVIOIDEN TEKEMISEEN
