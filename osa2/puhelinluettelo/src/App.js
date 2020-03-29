@@ -101,6 +101,18 @@ const App = () => {
         })
       }, 5000)
     })
+    .catch(error => {
+      setMessage({
+        content:`${JSON.stringify(error.response.data.error)}`,
+        type:'error'
+      })
+      setTimeout(() => {
+        setMessage({
+          content:null,
+          type: null
+        })
+      }, 5000)
+    })
   }
   
   const deleteClickHandler = (id) => {
